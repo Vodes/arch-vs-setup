@@ -8,9 +8,7 @@ distrobox-export -a code -ef "--enable-features=UseOzonePlatform --ozone-platfor
 
 # Install python stuff
 pip install --user vsjet vsmuxtools vodesfunc
-printf 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bash_profile
-printf 'fix-vs=chmod -R u+x ~/scripts/ && ~/scripts/fix-vs.sh' >> $HOME/.bash_profile
-
+printf '\nexport PATH=$PATH:$HOME/.local/bin' >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
 vsgenstubs4
